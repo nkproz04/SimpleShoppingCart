@@ -1,0 +1,150 @@
+/* Global styles */
+body {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  background-image: url('produce-section.jpg'); /* Add the path to your image */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+h1 {
+  text-align: center;
+  font-size: 48px;
+  font-weight: bold;
+  color: #ff7f50; /* Coral color */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Text shadow for epic effect */
+  padding: 20px;
+}
+
+/* Shopping cart styles */
+#shopping-cart {
+  margin: 0 auto;
+  max-width: 600px;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 5px;
+}
+
+#items {
+  margin-bottom: 20px;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.item-name {
+  flex: 2;
+}
+
+.item-price {
+  flex: 1;
+  text-align: right;
+}
+
+.item-quantity {
+  flex: 1;
+  text-align: right;
+  color: #3498db;
+}
+
+.item-subtotal {
+  flex: 2; /* Adjusted flex value to create spacing */
+  text-align: right;
+  font-weight: bold;
+}
+
+.delete-button {
+  flex: 1; /* Adjusted flex value to create spacing */
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.delete-button:hover {
+  background-color: #c0392b;
+}
+
+#add-item {
+  max-width: 600px;
+  margin: 20px auto;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 5px;
+}
+
+#add-item h2 {
+  margin-top: 0;
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+#add-item label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+#add-item input[type="text"],
+#add-item input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-bottom: 15px;
+}
+
+#add-button {
+  background-color: #2ecc71;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+#add-button:hover {
+  background-color: #27ae60;
+}
+
+/* Responsive styles for mobile devices */
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 36px; /* Adjust title font size for smaller screens */
+  }
+
+  .item {
+    flex-wrap: wrap; /* Allow items to wrap to a new line on smaller screens */
+  }
+
+  .item-name,
+  .item-price,
+  .item-quantity,
+  .item-subtotal,
+  .delete-button {
+    flex: 1 100%; /* Take up full width on smaller screens */
+  }
+
+  .item-price,
+  .item-quantity,
+  .item-subtotal {
+    text-align: left; /* Align these elements to the left on smaller screens */
+    margin-bottom: 5px; /* Add some space between elements on smaller screens */
+  }
+
+  .item-subtotal {
+    font-weight: normal; /* Reset font weight for subtotal on smaller screens */
+  }
+}
